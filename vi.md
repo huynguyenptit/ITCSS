@@ -2,7 +2,7 @@
 Năm ngoái, khi mà chúng tôi bắt đầu kế hoạch thiết kế lại [HEROized](https://www.heroized.com/) và website mới Xfive.co
 tôi đã tìm kiếm một cấu trúc CSS mà cho phép dễ dàng phát triển website và thêm nữa là bảo trì  
 [CSS Modules](https://www.sitepoint.com/understanding-css-modules-methodology/) khá mới mẻ và lạ trong thời điểm này, và
-tôi đã luôn xem hóa học [thiết kế nguyên tử](http://patternlab.io/) như là nhân tạo. Sau đó, tôi đã xem qua ITCSS của
+tôi đã luôn xem ~~hóa học [thiết kế nguyên tử](http://patternlab.io/) ~~(*Tính tương đồng của ...*)như là nhân tạo. Sau đó, tôi đã xem qua ITCSS của
 [Harry Roberts](https://csswizardry.com/) vào tháng 6 năm 2015 trên [báo mạng](https://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731)
 và ngay lập tức tôi đã bị thích cách tiếp cận CSS đơn giản này.
 ## ITCSS là gì?
@@ -12,16 +12,17 @@ specificity__.
 ITCSS có thể sử dụng với tiền sử lý hoặc không, và nó tương thích với các luồng CSS như BEM, SMACSS hay OOCSS.  
 Một trong những nguyên tắc chính của ITCSS là nó chia mã nguồn CSS cơ bản của bạn thành các phần (gọi là các _layer_),
 có thiết kế tam giác ngược:  
-![ITCSS form](https://www.xfivecdn.com/xfive/wp-content/uploads/2016/02/01083650/itcss-layers2.svg)  
+![ITCSS form](https://www.xfivecdn.com/xfive/wp-content/uploads/2016/02/01083650/itcss-layers2.svg) 
 Những layer đó như sau:  
 * __Settings__ - được sử dụng với tiền xử lý và chứa font, định nghĩa màu sắc, v.v...
-* __Tools__ - tất cả được sử dụng các maxin và hàm. Điều quan trọng không được đưa ra trong bất kì cái nào trong 2 layer đầu tiên.
+* __Tools__ - tất cả được sử dụng các maxin và hàm. ~~Điều quan trọng không được đưa ra trong bất kì cái nào trong 2 layer đầu tiên~~.
+*Sửa:Đưa ra bất kì CSS nào trong 2 layer đầu đều không quan trọng.*
 * __Generic__ - cài đặt lại và(hoặc) bình thường hóa các kiểu, định nghĩa kích cỡ khối,v.v... Nó là layer đầu tiên mà
-thực tế tạo ra CSS
+~~thực tế~~ tạo ra CSS. *Sửa: Thực sự*
 * __Elements__ - Tạo kiểu cho các thành phần Html trần (như là H1,A,v.v..). Những thứ này đi kèm với những thiết kế mặc
 định của trình duyệt vì vậy chúng ra có thể thiết kế lại chúng ở đây.
-* __Objects__ - những bộ chọn class cơ bản định nghĩa những mẫu thiết kế không rõ ràng, ví dụ như đối tượng phương tiện
-được biết từ OOCSS.
+* __Objects__ - những bộ chọn class cơ bản định nghĩa những mẫu thiết kế không rõ ràng, ví dụ như đối tượng ~~phương tiện~~
+được biết từ OOCSS. *Sửa: Media*
 * __Components__ - Các thành phần UI cụ thể. Nó là nơi mà hầu hết các công việc của chúng ta diễn ra và các thành phần UI
 của chúng ta thường chứa Objects và Components.
 * __Utilities__ - Các lớp tiện ích hay trợ giúp với khả năng ghi đè bất cứ thứ gì có trước trong tam giác, ví dụ như ẩn
